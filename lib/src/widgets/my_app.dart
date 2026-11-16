@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import '../screens/home.dart';
 import '../routers/routers.dart';
 
 class MyApp extends StatelessWidget {
@@ -7,7 +6,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Assistence App',
-      initialRoute: 'home',
+      initialRoute: '/',
       debugShowCheckedModeBanner: false,
       theme: ThemeData().copyWith(
         appBarTheme: AppBarTheme(
