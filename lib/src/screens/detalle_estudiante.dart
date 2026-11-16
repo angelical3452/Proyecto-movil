@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/avatar.dart';
+
 class EstudianteDetalleHistoricoScreen extends StatelessWidget {
   const EstudianteDetalleHistoricoScreen({super.key});
 
@@ -7,47 +9,25 @@ class EstudianteDetalleHistoricoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        title: Text(
-          'Detalle De Asignatura',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
-          ),
-        ),
-        centerTitle: true,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 16.0),
-            child: Stack(
-              alignment: Alignment.bottomRight,
-              children: [
-                CircleAvatar(
-                  radius: 18,
-                  backgroundColor: Color(0xFF14532D),
-                  child: Text(
-                    'LG',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 13,
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent[400],
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white, width: 1.5),
-                  ),
-                ),
-              ],
+        surfaceTintColor: Colors.transparent,
+        elevation: 1,
+        shadowColor: Colors.black26,
+        toolbarHeight: 80,
+        titleSpacing: 20,
+        title: Row(
+          children: [
+            Text(
+              'Detalles de asignatura',
+              style: TextStyle(
+                color: Colors.black87,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
             ),
-          ),
-        ],
+            Spacer(),
+            MyAvatar(),
+          ],
+        ),
       ),
 
       body: SafeArea(

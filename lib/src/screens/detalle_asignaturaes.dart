@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/avatar.dart';
+
 class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
   const EstudianteDetalleAsignaturaScreen({super.key});
 
@@ -7,49 +9,27 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        title: Text(
-          'Detalle De Asignatura',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
-          ),
-        ),
-        centerTitle: true,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 16.0),
-            child: Stack(
-              alignment: Alignment.bottomRight,
-              children: [
-                CircleAvatar(
-                  radius: 18,
-                  backgroundColor: Color(0xFF14532D),
-                  child: Text(
-                    'LG',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 13,
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent[400],
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white, width: 1.5),
-                  ),
-                ),
-              ],
+        surfaceTintColor: Colors.transparent,
+        elevation: 1,
+        shadowColor: Colors.black26,
+        toolbarHeight: 80,
+        titleSpacing: 20,
+        title: Row(
+          children: [
+            Text(
+              'Detalles de asignatura',
+              style: TextStyle(
+                color: Colors.black87,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
             ),
-          ),
-        ],
+            Spacer(),
+            MyAvatar(),
+          ],
+        ),
       ),
-      
+
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.all(16.0),
@@ -117,7 +97,7 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 16),
-        
+
             // Tarjeta del Profesor
             Container(
               padding: EdgeInsets.all(14),
@@ -175,7 +155,7 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 14),
-        
+
             // Estadísticas rápidas (Asistencia y Aula)
             Row(
               children: [
@@ -237,7 +217,7 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 14),
-        
+
             // Horario y Sesión Activa
             Container(
               padding: EdgeInsets.all(14),
@@ -311,7 +291,7 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-        
+
             // Tarjeta de Validación de Presencia y Escáner QR
             Container(
               padding: EdgeInsets.all(16.0),
@@ -368,7 +348,7 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16),
-        
+
                   // Contenedor visual del escáner QR
                   Container(
                     height: 200,
@@ -420,7 +400,7 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16),
-        
+
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton.icon(
@@ -458,7 +438,7 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-        
+
             // Historial de Clases
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -468,7 +448,10 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
                   children: [
                     Text(
                       'Historial de Clases',
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     Text(
                       'Registro reciente de este corte',
@@ -494,7 +477,7 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 12),
-        
+
             _buildClassTile(
               num: 'Sesión #16 (Hoy, 18 Nov)',
               time: '06:00 - 08:00',
@@ -517,7 +500,7 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
               badgeColor: Colors.green,
             ),
             SizedBox(height: 8),
-        
+
             OutlinedButton(
               style: OutlinedButton.styleFrom(
                 padding: EdgeInsets.symmetric(vertical: 12),
@@ -544,7 +527,7 @@ class EstudianteDetalleAsignaturaScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-        
+
             // Reglamento Estudiantil (Acuerdo 024)
             Container(
               padding: EdgeInsets.all(16),

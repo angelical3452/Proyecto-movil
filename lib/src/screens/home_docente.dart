@@ -312,33 +312,33 @@ class HomeDocenteScreen extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Container(width: 6, color:  Color(0xFF3D7A52)),
+                    Container(width: 6, color: Color(0xFF3D7A52)),
                     Expanded(
                       child: Padding(
-                        padding:  EdgeInsets.all(14),
+                        padding: EdgeInsets.all(14),
                         child: Row(
                           children: [
                             Container(
                               width: 70,
                               height: 70,
                               decoration: BoxDecoration(
-                                color:  Color(0xFFD5F8D9),
+                                color: Color(0xFFD5F8D9),
                                 borderRadius: BorderRadius.circular(8),
                               ),
-                              child:  Icon(
+                              child: Icon(
                                 Icons.groups,
                                 size: 30,
                                 color: Color(0xFF005A2B),
                               ),
                             ),
-                             SizedBox(width: 18),
+                            SizedBox(width: 18),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
                                     children: [
-                                       Flexible(
+                                      Flexible(
                                         child: Text(
                                           'Mis Clases',
                                           maxLines: 1,
@@ -351,19 +351,19 @@ class HomeDocenteScreen extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                       SizedBox(width: 8),
+                                      SizedBox(width: 8),
                                       Container(
-                                        padding:  EdgeInsets.symmetric(
+                                        padding: EdgeInsets.symmetric(
                                           horizontal: 9,
                                           vertical: 3,
                                         ),
                                         decoration: BoxDecoration(
-                                          color:  Color(0xFFD5F8D9),
+                                          color: Color(0xFFD5F8D9),
                                           borderRadius: BorderRadius.circular(
                                             4,
                                           ),
                                         ),
-                                        child:  Text(
+                                        child: Text(
                                           'En curso',
                                           style: TextStyle(
                                             fontSize: 12,
@@ -374,8 +374,8 @@ class HomeDocenteScreen extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                   SizedBox(height: 6),
-                                   Text(
+                                  SizedBox(height: 6),
+                                  Text(
                                     'Gestionar clases activas, listado de estudiantes inscritos y asistencia',
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
@@ -388,15 +388,15 @@ class HomeDocenteScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                             SizedBox(width: 10),
+                            SizedBox(width: 10),
                             Container(
                               width: 40,
                               height: 40,
                               decoration: BoxDecoration(
-                                color:  Color(0xFFEDEDED),
+                                color: Color(0xFFEDEDED),
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              child:  Icon(
+                              child: Icon(
                                 Icons.arrow_forward,
                                 size: 22,
                                 color: Color(0xFF1C1C1C),
@@ -414,12 +414,12 @@ class HomeDocenteScreen extends StatelessWidget {
 
           // Tarjeta 3: Historial de Asistencia
           Container(
-            margin:  EdgeInsets.only(bottom: 16),
+            margin: EdgeInsets.only(bottom: 16),
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(8),
-              boxShadow:  [
+              boxShadow: [
                 BoxShadow(
                   color: Color(0x26000000),
                   blurRadius: 8,
@@ -428,38 +428,40 @@ class HomeDocenteScreen extends StatelessWidget {
               ],
             ),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, "docenteHistorial");
+              },
               child: IntrinsicHeight(
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Container(width: 6, color:  Color(0xFFD50000)),
+                    Container(width: 6, color: Color(0xFFD50000)),
                     Expanded(
                       child: Padding(
-                        padding:  EdgeInsets.all(14),
+                        padding: EdgeInsets.all(14),
                         child: Row(
                           children: [
                             Container(
                               width: 70,
                               height: 70,
                               decoration: BoxDecoration(
-                                color:  Color(0xFFFFE3E3),
+                                color: Color(0xFFFFE3E3),
                                 borderRadius: BorderRadius.circular(8),
                               ),
-                              child:  Icon(
+                              child: Icon(
                                 Icons.history,
                                 size: 30,
                                 color: Color(0xFFD50000),
                               ),
                             ),
-                             SizedBox(width: 18),
+                            SizedBox(width: 18),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
                                     children: [
-                                       Flexible(
+                                      Flexible(
                                         child: Text(
                                           'Historial de Asistencia',
                                           maxLines: 1,
@@ -472,19 +474,19 @@ class HomeDocenteScreen extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                       SizedBox(width: 8),
+                                      SizedBox(width: 8),
                                       Container(
-                                        padding:  EdgeInsets.symmetric(
+                                        padding: EdgeInsets.symmetric(
                                           horizontal: 9,
                                           vertical: 3,
                                         ),
                                         decoration: BoxDecoration(
-                                          color:  Color(0xFFE4E7E1),
+                                          color: Color(0xFFE4E7E1),
                                           borderRadius: BorderRadius.circular(
                                             4,
                                           ),
                                         ),
-                                        child:  Text(
+                                        child: Text(
                                           'Auditoría',
                                           style: TextStyle(
                                             fontSize: 12,
@@ -495,8 +497,8 @@ class HomeDocenteScreen extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                   SizedBox(height: 6),
-                                   Text(
+                                  SizedBox(height: 6),
+                                  Text(
                                     'Consultar reportes de asistencia pasados, bitácora de cambios y registros',
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
@@ -509,15 +511,15 @@ class HomeDocenteScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                             SizedBox(width: 10),
+                            SizedBox(width: 10),
                             Container(
                               width: 40,
                               height: 40,
                               decoration: BoxDecoration(
-                                color:  Color(0xFFEDEDED),
+                                color: Color(0xFFEDEDED),
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              child:  Icon(
+                              child: Icon(
                                 Icons.arrow_forward,
                                 size: 22,
                                 color: Color(0xFF1C1C1C),
@@ -535,12 +537,12 @@ class HomeDocenteScreen extends StatelessWidget {
 
           // Tarjeta 4: Inasistencias
           Container(
-            margin:  EdgeInsets.only(bottom: 16),
+            margin: EdgeInsets.only(bottom: 16),
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(8),
-              boxShadow:  [
+              boxShadow: [
                 BoxShadow(
                   color: Color(0x26000000),
                   blurRadius: 8,
@@ -549,38 +551,40 @@ class HomeDocenteScreen extends StatelessWidget {
               ],
             ),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, "docenteInasistencias");
+              },
               child: IntrinsicHeight(
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Container(width: 6, color:  Color(0xFF00843D)),
+                    Container(width: 6, color: Color(0xFF00843D)),
                     Expanded(
                       child: Padding(
-                        padding:  EdgeInsets.all(14),
+                        padding: EdgeInsets.all(14),
                         child: Row(
                           children: [
                             Container(
                               width: 70,
                               height: 70,
                               decoration: BoxDecoration(
-                                color:  Color(0xFFD5F8D9),
+                                color: Color(0xFFD5F8D9),
                                 borderRadius: BorderRadius.circular(8),
                               ),
-                              child:  Icon(
+                              child: Icon(
                                 Icons.event_busy,
                                 size: 30,
                                 color: Color(0xFF005A2B),
                               ),
                             ),
-                             SizedBox(width: 18),
+                            SizedBox(width: 18),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
                                     children: [
-                                       Flexible(
+                                      Flexible(
                                         child: Text(
                                           'Inasistencias',
                                           maxLines: 1,
@@ -593,19 +597,19 @@ class HomeDocenteScreen extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                       SizedBox(width: 8),
+                                      SizedBox(width: 8),
                                       Container(
-                                        padding:  EdgeInsets.symmetric(
+                                        padding: EdgeInsets.symmetric(
                                           horizontal: 9,
                                           vertical: 3,
                                         ),
                                         decoration: BoxDecoration(
-                                          color:  Color(0xFFE4E7E1),
+                                          color: Color(0xFFE4E7E1),
                                           borderRadius: BorderRadius.circular(
                                             4,
                                           ),
                                         ),
-                                        child:  Text(
+                                        child: Text(
                                           'Revisión',
                                           style: TextStyle(
                                             fontSize: 12,
@@ -616,8 +620,8 @@ class HomeDocenteScreen extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                   SizedBox(height: 6),
-                                   Text(
+                                  SizedBox(height: 6),
+                                  Text(
                                     'Consultar reporte de faltas, validar justificaciones y notificar',
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
@@ -630,15 +634,15 @@ class HomeDocenteScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                             SizedBox(width: 10),
+                            SizedBox(width: 10),
                             Container(
                               width: 40,
                               height: 40,
                               decoration: BoxDecoration(
-                                color:  Color(0xFFEDEDED),
+                                color: Color(0xFFEDEDED),
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              child:  Icon(
+                              child: Icon(
                                 Icons.arrow_forward,
                                 size: 22,
                                 color: Color(0xFF1C1C1C),
@@ -655,8 +659,8 @@ class HomeDocenteScreen extends StatelessWidget {
           ),
 
           // ---------- Herramientas rápidas ----------
-           SizedBox(height: 12),
-           Text(
+          SizedBox(height: 12),
+          Text(
             'HERRAMIENTAS RÁPIDAS',
             style: TextStyle(
               fontSize: 14,
@@ -665,22 +669,22 @@ class HomeDocenteScreen extends StatelessWidget {
               color: Color(0xFF555B55),
             ),
           ),
-           SizedBox(height: 12),
+          SizedBox(height: 12),
           Container(
-            padding:  EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             decoration: BoxDecoration(
-              color:  Color(0xFFEBEEE8),
+              color: Color(0xFFEBEEE8),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Row(
               children: [
-                 Icon(
+                Icon(
                   Icons.headset_mic_outlined,
                   size: 30,
                   color: Color(0xFF005A2B),
                 ),
-                 SizedBox(width: 14),
-                 Expanded(
+                SizedBox(width: 14),
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -704,7 +708,7 @@ class HomeDocenteScreen extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child:  Text(
+                  child: Text(
                     'Contactar',
                     style: TextStyle(
                       fontSize: 15,

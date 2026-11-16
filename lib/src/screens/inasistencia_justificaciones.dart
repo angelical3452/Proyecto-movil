@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/avatar.dart';
+
 class DocenteInasistenciasScreen extends StatelessWidget {
   const DocenteInasistenciasScreen({super.key});
 
@@ -7,14 +9,24 @@ class DocenteInasistenciasScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        title: Text(
-          'Inasistencias Y Justificaciones',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            fontSize: 17,
-          ),
+        surfaceTintColor: Colors.transparent,
+        elevation: 1,
+        shadowColor: Colors.black26,
+        toolbarHeight: 80,
+        titleSpacing: 20,
+        title: Row(
+          children: [
+            Text(
+              'Inasistencias Y Justificaciones',
+              style: TextStyle(
+                color: Colors.black87,
+                fontWeight: FontWeight.bold,
+                fontSize: 17,
+              ),
+            ),
+            Spacer(),
+            MyAvatar(),
+          ],
         ),
       ),
 

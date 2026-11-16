@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/avatar.dart';
+
 class EstudianteJustificarScreen extends StatelessWidget {
   const EstudianteJustificarScreen({super.key});
 
@@ -7,47 +9,25 @@ class EstudianteJustificarScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        title: Text(
-          'Justificar Inasistencias',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
-          ),
-        ),
-        centerTitle: true,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 16.0),
-            child: Stack(
-              alignment: Alignment.bottomRight,
-              children: [
-                CircleAvatar(
-                  radius: 18,
-                  backgroundColor: Color(0xFF14532D),
-                  child: Text(
-                    'LG',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 13,
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent[400],
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white, width: 1.5),
-                  ),
-                ),
-              ],
+        surfaceTintColor: Colors.transparent,
+        elevation: 1,
+        shadowColor: Colors.black26,
+        toolbarHeight: 80,
+        titleSpacing: 20,
+        title: Row(
+          children: [
+            Text(
+              'Justificar Inasistencias',
+              style: TextStyle(
+                color: Colors.black87,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
             ),
-          ),
-        ],
+           Spacer(),
+            MyAvatar(),
+          ],
+        ),
       ),
 
       body: SafeArea(
@@ -98,7 +78,7 @@ class EstudianteJustificarScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 12),
-        
+
             // Alerta de plazo reglamentario
             Container(
               padding: EdgeInsets.all(12),
@@ -138,7 +118,7 @@ class EstudianteJustificarScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-        
+
             // Pestañas de filtro horizontales
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -153,7 +133,7 @@ class EstudianteJustificarScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-        
+
             // Tarjeta 1: Vence en 24h
             _buildAbsenceCard(
               badge: 'VENCE EN 24H',
@@ -164,12 +144,11 @@ class EstudianteJustificarScreen extends StatelessWidget {
               location: 'Campus Porvenir • Edificio Macagual - Au...',
               progressText: '2 de 6 permitidas',
               progressValue: 0.33,
-              warningText:
-                  'Próxima falta causará pérdida por inasistencia reglamentaria.',
+              warningText: 'Próxima falta causará pérdida por inasistencia reglamentaria.',
               actionButtonText: 'Justificar Inasistencia',
               isPrimary: true,
             ),
-        
+
             // Tarjeta 2: Plazo 3 días
             _buildAbsenceCard(
               badge: 'PLAZO: 3 DÍAS',
@@ -183,7 +162,7 @@ class EstudianteJustificarScreen extends StatelessWidget {
               actionButtonText: 'Justificar Inasistencia',
               isPrimary: true,
             ),
-        
+
             // Tarjeta 3: Soporte Radicado
             _buildAbsenceCard(
               badge: 'SOPORTE RADICADO • EN VALIDACIÓN',
@@ -197,7 +176,7 @@ class EstudianteJustificarScreen extends StatelessWidget {
               actionButtonText: 'Ver Comprobante Radicado (PDF)',
               isPrimary: false,
             ),
-        
+
             // Tarjeta 4: Plazo 4 días
             _buildAbsenceCard(
               badge: 'PLAZO: 4 DÍAS',
@@ -212,7 +191,7 @@ class EstudianteJustificarScreen extends StatelessWidget {
               isPrimary: true,
             ),
             SizedBox(height: 10),
-        
+
             // Sección de Requisitos de Validez
             Container(
               padding: EdgeInsets.all(16),

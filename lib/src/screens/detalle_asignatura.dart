@@ -1,23 +1,35 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/avatar.dart';
+
 class DocenteDetalleAsignaturaScreen extends StatelessWidget {
-   const DocenteDetalleAsignaturaScreen({super.key});
+  const DocenteDetalleAsignaturaScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        title: Text(
-          'Detalles de asignatura',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
-          ),
+        surfaceTintColor: Colors.transparent,
+        elevation: 1,
+        shadowColor: Colors.black26,
+        toolbarHeight: 80,
+        titleSpacing: 20,
+        title: Row(
+          children: [
+            Text(
+              'Detalles de asignatura',
+              style: TextStyle(
+                color: Colors.black87,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+            ),
+            Spacer(),
+            MyAvatar(),
+          ],
         ),
       ),
-      
+
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.all(16.0),
@@ -26,7 +38,7 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                 Expanded(
+                Expanded(
                   child: Text(
                     'Gestión Docente > Historial > BIO-401',
                     style: TextStyle(
@@ -38,15 +50,12 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding:  EdgeInsets.symmetric(
-                    horizontal: 8,
-                    vertical: 3,
-                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                   decoration: BoxDecoration(
-                    color:  Color(0xFFDCFCE7),
+                    color: Color(0xFFDCFCE7),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child:  Text(
+                  child: Text(
                     '● FINALIZADA',
                     style: TextStyle(
                       color: Color(0xFF14532D),
@@ -57,11 +66,11 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                 ),
               ],
             ),
-             SizedBox(height: 12),
+            SizedBox(height: 12),
 
             // Tarjeta 1: Resumen General de la Asignatura
             Container(
-              padding:  EdgeInsets.all(16.0),
+              padding: EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16),
@@ -69,14 +78,14 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                   BoxShadow(
                     color: Colors.black.withOpacity(0.03),
                     blurRadius: 8,
-                    offset:  Offset(0, 2),
+                    offset: Offset(0, 2),
                   ),
                 ],
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   Text(
+                  Text(
                     'BIO-401 • Periodo 2024-2',
                     style: TextStyle(
                       color: Color(0xFF14532D),
@@ -84,8 +93,8 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                       fontSize: 12,
                     ),
                   ),
-                   SizedBox(height: 4),
-                   Text(
+                  SizedBox(height: 4),
+                  Text(
                     'Biología Celular y Molecular',
                     style: TextStyle(
                       fontSize: 21,
@@ -93,19 +102,19 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                       color: Color(0xFF14532D),
                     ),
                   ),
-                   SizedBox(height: 4),
-                   Text(
+                  SizedBox(height: 4),
+                  Text(
                     'Licenciatura en Biología y Química • 38 Estudiantes',
                     style: TextStyle(color: Colors.grey, fontSize: 12),
                   ),
-                   SizedBox(height: 16),
+                  SizedBox(height: 16),
 
                   // Cuadros de Estadísticas
                   Row(
                     children: [
                       Expanded(
                         child: Container(
-                          padding:  EdgeInsets.all(12),
+                          padding: EdgeInsets.all(12),
                           decoration: BoxDecoration(
                             color: Color(0xFFF6F8F6),
                             borderRadius: BorderRadius.circular(10),
@@ -113,19 +122,19 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                           child: Row(
                             children: [
                               Container(
-                                padding:  EdgeInsets.all(8),
+                                padding: EdgeInsets.all(8),
                                 decoration: BoxDecoration(
-                                  color:  Color(0xFFDCFCE7),
+                                  color: Color(0xFFDCFCE7),
                                   borderRadius: BorderRadius.circular(8),
                                 ),
-                                child:  Icon(
+                                child: Icon(
                                   Icons.pie_chart_outline,
                                   color: Color(0xFF14532D),
                                   size: 20,
                                 ),
                               ),
-                               SizedBox(width: 10),
-                               Column(
+                              SizedBox(width: 10),
+                              Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
@@ -149,10 +158,10 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                       SizedBox(width: 10),
+                      SizedBox(width: 10),
                       Expanded(
                         child: Container(
-                          padding:  EdgeInsets.all(12),
+                          padding: EdgeInsets.all(12),
                           decoration: BoxDecoration(
                             color: Color(0xFFF6F8F6),
                             borderRadius: BorderRadius.circular(10),
@@ -160,19 +169,19 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                           child: Row(
                             children: [
                               Container(
-                                padding:  EdgeInsets.all(8),
+                                padding: EdgeInsets.all(8),
                                 decoration: BoxDecoration(
                                   color: Colors.blue.shade50,
                                   borderRadius: BorderRadius.circular(8),
                                 ),
-                                child:  Icon(
+                                child: Icon(
                                   Icons.event_available,
                                   color: Colors.blue,
                                   size: 20,
                                 ),
                               ),
-                               SizedBox(width: 10),
-                               Column(
+                              SizedBox(width: 10),
+                              Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
@@ -198,7 +207,7 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                   SizedBox(height: 14),
+                  SizedBox(height: 14),
 
                   // Botones de acción (Exportar PDF y Ver Inasistencias)
                   Row(
@@ -206,19 +215,19 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                       Expanded(
                         child: OutlinedButton.icon(
                           style: OutlinedButton.styleFrom(
-                            padding:  EdgeInsets.symmetric(vertical: 10),
-                            side:  BorderSide(color: Color(0xFF14532D)),
+                            padding: EdgeInsets.symmetric(vertical: 10),
+                            side: BorderSide(color: Color(0xFF14532D)),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
                           onPressed: () {},
-                          icon:  Icon(
+                          icon: Icon(
                             Icons.picture_as_pdf_outlined,
                             size: 16,
                             color: Color(0xFF14532D),
                           ),
-                          label:  Text(
+                          label: Text(
                             'Reporte PDF',
                             style: TextStyle(
                               color: Color(0xFF14532D),
@@ -228,13 +237,13 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                       SizedBox(width: 8),
+                      SizedBox(width: 8),
                       Expanded(
                         child: ElevatedButton.icon(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color(0xFF14532D),
                             foregroundColor: Colors.white,
-                            padding:  EdgeInsets.symmetric(vertical: 10),
+                            padding: EdgeInsets.symmetric(vertical: 10),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -243,11 +252,8 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                             context,
                             "docenteInasistencias",
                           ),
-                          icon:  Icon(
-                            Icons.assignment_late_outlined,
-                            size: 16,
-                          ),
-                          label:  Text(
+                          icon: Icon(Icons.assignment_late_outlined, size: 16),
+                          label: Text(
                             'Inasistencias',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -261,14 +267,14 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                 ],
               ),
             ),
-             SizedBox(height: 18),
+            SizedBox(height: 18),
 
             // Título de selector de sesiones
-             Text(
+            Text(
               'Sesiones de Clase',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
-             SizedBox(height: 10),
+            SizedBox(height: 10),
 
             // Selector horizontal de clases
             SingleChildScrollView(
@@ -276,18 +282,18 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
               child: Row(
                 children: [
                   _buildSessionChip('Clase #16 (18 Nov)', isSelected: true),
-                   SizedBox(width: 8),
+                  SizedBox(width: 8),
                   _buildSessionChip('Clase #15 (13 Nov)', isSelected: false),
-                   SizedBox(width: 8),
+                  SizedBox(width: 8),
                   _buildSessionChip('Clase #14 (11 Nov)', isSelected: false),
                 ],
               ),
             ),
-             SizedBox(height: 16),
+            SizedBox(height: 16),
 
             // Tarjeta 2: Detalle de Clase #16
             Container(
-              padding:  EdgeInsets.all(16.0),
+              padding: EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16),
@@ -295,7 +301,7 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                   BoxShadow(
                     color: Colors.black.withOpacity(0.03),
                     blurRadius: 8,
-                    offset:  Offset(0, 2),
+                    offset: Offset(0, 2),
                   ),
                 ],
               ),
@@ -305,7 +311,7 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                       Column(
+                      Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
@@ -323,7 +329,7 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                         ],
                       ),
                       IconButton(
-                        icon:  Icon(
+                        icon: Icon(
                           Icons.download_outlined,
                           color: Color(0xFF14532D),
                           size: 20,
@@ -332,31 +338,28 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                   SizedBox(height: 12),
+                  SizedBox(height: 12),
 
                   // Mini-resumen: 35 Asistió | 2 Tarde | 1 Faltó
                   Row(
                     children: [
                       _buildMiniCounter('35', 'Asistió', Colors.green),
-                       SizedBox(width: 8),
+                      SizedBox(width: 8),
                       _buildMiniCounter('2', 'Tarde', Colors.orange),
-                       SizedBox(width: 8),
+                      SizedBox(width: 8),
                       _buildMiniCounter('1', 'Faltó', Colors.red),
                     ],
                   ),
-                   SizedBox(height: 14),
+                  SizedBox(height: 14),
 
                   // Buscador interno
                   Container(
-                    padding:  EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 8,
-                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                     decoration: BoxDecoration(
                       color: Color(0xFFF6F8F6),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child:  Row(
+                    child: Row(
                       children: [
                         Icon(Icons.search, color: Colors.grey, size: 18),
                         SizedBox(width: 8),
@@ -367,7 +370,7 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                   SizedBox(height: 12),
+                  SizedBox(height: 12),
 
                   // Lista de estudiantes de la sesión
                   _buildAttendanceTile(
@@ -398,13 +401,13 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                     'No Asistió',
                     Colors.red,
                   ),
-                   SizedBox(height: 10),
+                  SizedBox(height: 10),
 
                   // Enlace inferior
                   Center(
                     child: TextButton(
                       onPressed: () {},
-                      child:  Text(
+                      child: Text(
                         '+ Ver 34 estudiantes más de esta sesión',
                         style: TextStyle(
                           color: Color(0xFF14532D),
@@ -417,7 +420,7 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
                 ],
               ),
             ),
-             SizedBox(height: 20),
+            SizedBox(height: 20),
           ],
         ),
       ),
@@ -426,7 +429,7 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
 
   Widget _buildSessionChip(String label, {required bool isSelected}) {
     return Container(
-      padding:  EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
       decoration: BoxDecoration(
         color: isSelected ? Color(0xFF14532D) : Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -448,7 +451,7 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
   Widget _buildMiniCounter(String count, String label, Color color) {
     return Expanded(
       child: Container(
-        padding:  EdgeInsets.symmetric(vertical: 8),
+        padding: EdgeInsets.symmetric(vertical: 8),
         decoration: BoxDecoration(
           color: color.withOpacity(0.1),
           borderRadius: BorderRadius.circular(8),
@@ -485,8 +488,8 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
     Color color,
   ) {
     return Container(
-      margin:  EdgeInsets.only(bottom: 8),
-      padding:  EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      margin: EdgeInsets.only(bottom: 8),
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       decoration: BoxDecoration(
         color: Color(0xFFF6F8F6),
         borderRadius: BorderRadius.circular(10),
@@ -505,28 +508,25 @@ class DocenteDetalleAsignaturaScreen extends StatelessWidget {
               ),
             ),
           ),
-           SizedBox(width: 10),
+          SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   name,
-                  style:  TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 13,
-                  ),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
                 ),
-                 SizedBox(height: 2),
+                SizedBox(height: 2),
                 Text(
                   subtitle,
-                  style:  TextStyle(fontSize: 11, color: Colors.grey),
+                  style: TextStyle(fontSize: 11, color: Colors.grey),
                 ),
               ],
             ),
           ),
           Container(
-            padding:  EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
               color: color.withOpacity(0.15),
               borderRadius: BorderRadius.circular(12),

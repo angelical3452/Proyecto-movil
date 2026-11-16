@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Assistence App',
-      initialRoute: '/',
+      initialRoute: 'home',
       debugShowCheckedModeBanner: false,
       theme: ThemeData().copyWith(
         appBarTheme: AppBarTheme(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/avatar.dart';
+
 class CrearAsignaturaScreen extends StatefulWidget {
   const CrearAsignaturaScreen({super.key});
 
@@ -33,60 +35,22 @@ class _CrearAsignaturaScreenState extends State<CrearAsignaturaScreen> {
         surfaceTintColor: Colors.transparent,
         elevation: 1,
         shadowColor: Colors.black26,
-        toolbarHeight: 64,
-        titleSpacing: 0,
-        title: Align(
-          alignment: Alignment.centerLeft,
-          // Logo (reemplazar por Image.asset('assets/logo.png', height: 36))
-          child: Container(
-            width: 40,
-            height: 36,
-            decoration: BoxDecoration(
-              color: Color(0xFFD5F8D9),
-              borderRadius: BorderRadius.circular(8),
+        toolbarHeight: 80,
+        titleSpacing: 20,
+        title: Row(
+          children: [
+            Text(
+              'Crear Asignatura',
+              style: TextStyle(
+                color: Colors.black87,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
             ),
-            child: Icon(Icons.school, color: Color(0xFF005A2B)),
-          ),
+            Spacer(),
+            MyAvatar(),
+          ],
         ),
-        actions: [
-          Stack(
-            clipBehavior: Clip.none,
-            children: [
-              Container(
-                width: 42,
-                height: 42,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: Color(0xFF005A2B),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Text(
-                  'CM',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              Positioned(
-                right: -3,
-                bottom: -3,
-                child: Container(
-                  width: 14,
-                  height: 14,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF2FAE5F),
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Color(0xFFF6F8F3), width: 2),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Icon(Icons.keyboard_arrow_down, color: Color(0xFF555B55)),
-          SizedBox(width: 12),
-        ],
       ),
 
       // ======================= BODY =======================

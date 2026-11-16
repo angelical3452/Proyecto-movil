@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/avatar.dart';
+
 class VerAsignaturasProfScreen extends StatefulWidget {
   const VerAsignaturasProfScreen({super.key});
 
@@ -85,54 +87,22 @@ class _VerAsignaturasProfScreenState extends State<VerAsignaturasProfScreen> {
         surfaceTintColor: Colors.transparent,
         elevation: 1,
         shadowColor: Colors.black26,
-        toolbarHeight: 64,
-        titleSpacing: 0,
-        title: Text(
-          'Asignaturas',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w700,
-            color: Color(0xFF005A2B),
-          ),
+        toolbarHeight: 80,
+        titleSpacing: 20,
+        title: Row(
+          children: [
+            Text(
+              'Asignaturas',
+              style: TextStyle(
+                color: Colors.black87,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+            ),
+            Spacer(),
+            MyAvatar(),
+          ],
         ),
-        actions: [
-          Stack(
-            clipBehavior: Clip.none,
-            children: [
-              Container(
-                width: 42,
-                height: 42,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: Color(0xFF00843D),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Text(
-                  'CM',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              Positioned(
-                right: -3,
-                bottom: -3,
-                child: Container(
-                  width: 14,
-                  height: 14,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF2FAE5F),
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Color(0xFFF6F8F3), width: 2),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(width: 16),
-        ],
       ),
 
       // ======================= BODY =======================

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ConfiguracionScreen extends StatefulWidget {
-   const ConfiguracionScreen({super.key});
+  const ConfiguracionScreen({super.key});
 
   @override
   State<ConfiguracionScreen> createState() => _ConfiguracionScreenState();
@@ -56,8 +56,8 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
         elevation: 1,
         shadowColor: Colors.black26,
         toolbarHeight: 64,
-        titleSpacing: 0,
-        title:  Text(
+        titleSpacing: 20,
+        title: Text(
           'Configuración',
           style: TextStyle(
             fontSize: 20,
@@ -65,25 +65,12 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
             color: Color(0xFF1C1C1C),
           ),
         ),
-        actions: [
-          // Logo (reemplazar por Image.asset('assets/logo.png', height: 36))
-          Container(
-            width: 40,
-            height: 36,
-            margin:  EdgeInsets.only(right: 20),
-            decoration: BoxDecoration(
-              color:  Color(0xFFD5F8D9),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child:  Icon(Icons.school, color: Color(0xFF005A2B)),
-          ),
-        ],
       ),
 
       // ======================= BODY =======================
       body: SafeArea(
         child: ListView(
-          padding:  EdgeInsets.fromLTRB(20, 16, 20, 24),
+          padding: EdgeInsets.fromLTRB(20, 16, 20, 24),
           children: [
             // ---------- Foto de perfil ----------
             Center(
@@ -93,21 +80,18 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                   Container(
                     width: 110,
                     height: 110,
-                    padding:  EdgeInsets.all(3),
+                    padding: EdgeInsets.all(3),
                     decoration: BoxDecoration(
-                      color:  Color(0xFF005A2B),
+                      color: Color(0xFF005A2B),
                       borderRadius: BorderRadius.circular(18),
-                      border: Border.all(
-                        color:  Color(0xFF1F8A47),
-                        width: 3,
-                      ),
+                      border: Border.all(color: Color(0xFF1F8A47), width: 3),
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(13),
                       // Reemplazar por Image.asset / Image.network
                       child: Container(
-                        color:  Color(0xFFD5F8D9),
-                        child:  Icon(
+                        color: Color(0xFFD5F8D9),
+                        child: Icon(
                           Icons.person,
                           size: 64,
                           color: Color(0xFF005A2B),
@@ -122,10 +106,10 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       width: 36,
                       height: 36,
                       decoration: BoxDecoration(
-                        color:  Color(0xFF005A2B),
+                        color: Color(0xFF005A2B),
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child:  Icon(
+                      child: Icon(
                         Icons.photo_camera_outlined,
                         size: 20,
                         color: Colors.white,
@@ -135,18 +119,15 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                 ],
               ),
             ),
-             SizedBox(height: 8),
+            SizedBox(height: 8),
             Center(
               child: Container(
-                padding:  EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 3,
-                ),
+                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
                 decoration: BoxDecoration(
-                  color:  Color(0xFFE4E7E1),
+                  color: Color(0xFFE4E7E1),
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child:  Row(
+                child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Icon(Icons.circle, size: 8, color: Color(0xFF3D7A52)),
@@ -163,8 +144,8 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                 ),
               ),
             ),
-             SizedBox(height: 6),
-             Text(
+            SizedBox(height: 6),
+            Text(
               'JPG o PNG máx. 5MB. Fotografía\ninstitucional oficial recomendada.',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -173,22 +154,19 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                 color: Color(0xFF555B55),
               ),
             ),
-             SizedBox(height: 14),
+            SizedBox(height: 14),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GestureDetector(
                   onTap: () {},
                   child: Container(
-                    padding:  EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 12,
-                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     decoration: BoxDecoration(
-                      color:  Color(0xFFE4E7E1),
+                      color: Color(0xFFE4E7E1),
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child:  Row(
+                    child: Row(
                       children: [
                         Icon(
                           Icons.cloud_upload_outlined,
@@ -208,10 +186,10 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                     ),
                   ),
                 ),
-                 SizedBox(width: 12),
+                SizedBox(width: 12),
                 TextButton(
                   onPressed: () {},
-                  child:  Text(
+                  child: Text(
                     'Eliminar',
                     style: TextStyle(
                       fontSize: 13,
@@ -222,10 +200,10 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                 ),
               ],
             ),
-             SizedBox(height: 24),
+            SizedBox(height: 24),
 
             // ---------- Datos de cuenta (encabezado) ----------
-             Row(
+            Row(
               children: [
                 Icon(Icons.circle, size: 10, color: Color(0xFF005A2B)),
                 SizedBox(width: 8),
@@ -249,15 +227,15 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                 ),
               ],
             ),
-             SizedBox(height: 12),
+            SizedBox(height: 12),
 
             // ---------- Datos de cuenta (tarjeta) ----------
             Container(
-              padding:  EdgeInsets.all(16),
+              padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
-                boxShadow:  [
+                boxShadow: [
                   BoxShadow(
                     color: Color(0x14000000),
                     blurRadius: 8,
@@ -268,7 +246,7 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   Text(
+                  Text(
                     'Nombre de Usuario / Nombre Completo',
                     style: TextStyle(
                       fontSize: 13,
@@ -276,28 +254,25 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       color: Color(0xFF1C1C1C),
                     ),
                   ),
-                   SizedBox(height: 8),
+                  SizedBox(height: 8),
                   TextField(
                     controller: _nameController,
-                    style:  TextStyle(
-                      fontSize: 16,
-                      color: Color(0xFF1C1C1C),
-                    ),
+                    style: TextStyle(fontSize: 16, color: Color(0xFF1C1C1C)),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor:  Color(0xFFF1F2EC),
-                      contentPadding:  EdgeInsets.symmetric(
+                      fillColor: Color(0xFFF1F2EC),
+                      contentPadding: EdgeInsets.symmetric(
                         horizontal: 12,
                         vertical: 16,
                       ),
-                      prefixIcon:  Icon(
+                      prefixIcon: Icon(
                         Icons.person_outline,
                         color: Color(0xFF555B55),
                       ),
                       suffixIcon: IconButton(
                         onPressed: () =>
                             setState(() => _nameController.clear()),
-                        icon:  Icon(
+                        icon: Icon(
                           Icons.cancel_outlined,
                           color: Color(0xFF555B55),
                         ),
@@ -308,8 +283,8 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       ),
                     ),
                   ),
-                   SizedBox(height: 16),
-                   Row(
+                  SizedBox(height: 16),
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
@@ -340,26 +315,23 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       ),
                     ],
                   ),
-                   SizedBox(height: 8),
+                  SizedBox(height: 8),
                   TextFormField(
                     initialValue: 'c.mendoza@uniamazonia.edu.co',
                     readOnly: true,
-                    style:  TextStyle(
-                      fontSize: 16,
-                      color: Color(0xFF1C1C1C),
-                    ),
+                    style: TextStyle(fontSize: 16, color: Color(0xFF1C1C1C)),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor:  Color(0xFFF1F2EC),
-                      contentPadding:  EdgeInsets.symmetric(
+                      fillColor: Color(0xFFF1F2EC),
+                      contentPadding: EdgeInsets.symmetric(
                         horizontal: 12,
                         vertical: 16,
                       ),
-                      prefixIcon:  Icon(
+                      prefixIcon: Icon(
                         Icons.mail_outline,
                         color: Color(0xFF555B55),
                       ),
-                      suffixIcon:  Icon(
+                      suffixIcon: Icon(
                         Icons.lock_outline,
                         size: 20,
                         color: Color(0xFF555B55),
@@ -373,15 +345,15 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                 ],
               ),
             ),
-             SizedBox(height: 24),
+            SizedBox(height: 24),
 
             // ---------- Seguridad y contraseña ----------
             Container(
-              padding:  EdgeInsets.all(16),
+              padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
-                boxShadow:  [
+                boxShadow: [
                   BoxShadow(
                     color: Color(0x14000000),
                     blurRadius: 8,
@@ -399,17 +371,17 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                         width: 40,
                         height: 40,
                         decoration: BoxDecoration(
-                          color:  Color(0xFF8DF0A0),
+                          color: Color(0xFF8DF0A0),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child:  Icon(
+                        child: Icon(
                           Icons.shield_outlined,
                           size: 22,
                           color: Color(0xFF005A2B),
                         ),
                       ),
-                       SizedBox(width: 12),
-                       Expanded(
+                      SizedBox(width: 12),
+                      Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -435,10 +407,10 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       ),
                     ],
                   ),
-                   SizedBox(height: 20),
+                  SizedBox(height: 20),
 
                   // Contraseña actual
-                   Text(
+                  Text(
                     'Contraseña actual',
                     style: TextStyle(
                       fontSize: 13,
@@ -446,18 +418,18 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       color: Color(0xFF1C1C1C),
                     ),
                   ),
-                   SizedBox(height: 8),
+                  SizedBox(height: 8),
                   TextField(
                     controller: _currentPassController,
                     obscureText: _hideCurrent,
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor:  Color(0xFFF1F2EC),
-                      contentPadding:  EdgeInsets.symmetric(
+                      fillColor: Color(0xFFF1F2EC),
+                      contentPadding: EdgeInsets.symmetric(
                         horizontal: 12,
                         vertical: 16,
                       ),
-                      prefixIcon:  Icon(
+                      prefixIcon: Icon(
                         Icons.lock_outline,
                         color: Color(0xFF555B55),
                       ),
@@ -477,10 +449,10 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       ),
                     ),
                   ),
-                   SizedBox(height: 16),
+                  SizedBox(height: 16),
 
                   // Nueva contraseña
-                   Text(
+                  Text(
                     'Nueva contraseña',
                     style: TextStyle(
                       fontSize: 13,
@@ -488,28 +460,25 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       color: Color(0xFF1C1C1C),
                     ),
                   ),
-                   SizedBox(height: 8),
+                  SizedBox(height: 8),
                   TextField(
                     controller: _newPassController,
                     obscureText: _hideNew,
                     onChanged: (_) => setState(() {}),
-                    style:  TextStyle(
-                      fontSize: 16,
-                      color: Color(0xFF1C1C1C),
-                    ),
+                    style: TextStyle(fontSize: 16, color: Color(0xFF1C1C1C)),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor:  Color(0xFFF1F2EC),
+                      fillColor: Color(0xFFF1F2EC),
                       hintText: 'Ingresa tu nueva contraseña',
-                      hintStyle:  TextStyle(
+                      hintStyle: TextStyle(
                         fontSize: 16,
                         color: Color(0xFF555B55),
                       ),
-                      contentPadding:  EdgeInsets.symmetric(
+                      contentPadding: EdgeInsets.symmetric(
                         horizontal: 12,
                         vertical: 16,
                       ),
-                      prefixIcon:  Icon(
+                      prefixIcon: Icon(
                         Icons.vpn_key_outlined,
                         color: Color(0xFF555B55),
                       ),
@@ -528,13 +497,13 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       ),
                     ),
                   ),
-                   SizedBox(height: 10),
+                  SizedBox(height: 10),
 
                   // Indicador de seguridad
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                       Text(
+                      Text(
                         'Seguridad:',
                         style: TextStyle(
                           fontSize: 12,
@@ -543,14 +512,14 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       ),
                       Text(
                         strengthLabel,
-                        style:  TextStyle(
+                        style: TextStyle(
                           fontSize: 12,
                           color: Color(0xFF6B716B),
                         ),
                       ),
                     ],
                   ),
-                   SizedBox(height: 6),
+                  SizedBox(height: 6),
                   Row(
                     children: [
                       Expanded(
@@ -558,39 +527,39 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                           height: 5,
                           decoration: BoxDecoration(
                             color: strength >= 1
-                                ?  Color(0xFF00843D)
-                                :  Color(0xFFE4E7E1),
+                                ? Color(0xFF00843D)
+                                : Color(0xFFE4E7E1),
                             borderRadius: BorderRadius.circular(3),
                           ),
                         ),
                       ),
-                       SizedBox(width: 6),
+                      SizedBox(width: 6),
                       Expanded(
                         child: Container(
                           height: 5,
                           decoration: BoxDecoration(
                             color: strength >= 2
-                                ?  Color(0xFF00843D)
-                                :  Color(0xFFE4E7E1),
+                                ? Color(0xFF00843D)
+                                : Color(0xFFE4E7E1),
                             borderRadius: BorderRadius.circular(3),
                           ),
                         ),
                       ),
-                       SizedBox(width: 6),
+                      SizedBox(width: 6),
                       Expanded(
                         child: Container(
                           height: 5,
                           decoration: BoxDecoration(
                             color: strength >= 3
-                                ?  Color(0xFF00843D)
-                                :  Color(0xFFE4E7E1),
+                                ? Color(0xFF00843D)
+                                : Color(0xFFE4E7E1),
                             borderRadius: BorderRadius.circular(3),
                           ),
                         ),
                       ),
                     ],
                   ),
-                   SizedBox(height: 12),
+                  SizedBox(height: 12),
                   Row(
                     children: [
                       Icon(
@@ -599,29 +568,29 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                             : Icons.radio_button_unchecked,
                         size: 18,
                         color: hasMinLength
-                            ?  Color(0xFF00843D)
-                            :  Color(0xFF6B716B),
+                            ? Color(0xFF00843D)
+                            : Color(0xFF6B716B),
                       ),
-                       SizedBox(width: 6),
-                       Text(
+                      SizedBox(width: 6),
+                      Text(
                         'Mínimo 8 caracteres',
                         style: TextStyle(
                           fontSize: 12,
                           color: Color(0xFF6B716B),
                         ),
                       ),
-                       SizedBox(width: 20),
+                      SizedBox(width: 20),
                       Icon(
                         hasAlphanumeric
                             ? Icons.check_circle
                             : Icons.radio_button_unchecked,
                         size: 18,
                         color: hasAlphanumeric
-                            ?  Color(0xFF00843D)
-                            :  Color(0xFF6B716B),
+                            ? Color(0xFF00843D)
+                            : Color(0xFF6B716B),
                       ),
-                       SizedBox(width: 6),
-                       Text(
+                      SizedBox(width: 6),
+                      Text(
                         'Alfanumérico',
                         style: TextStyle(
                           fontSize: 12,
@@ -630,10 +599,10 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       ),
                     ],
                   ),
-                   SizedBox(height: 16),
+                  SizedBox(height: 16),
 
                   // Confirmar contraseña
-                   Text(
+                  Text(
                     'Confirmar nueva contraseña',
                     style: TextStyle(
                       fontSize: 13,
@@ -641,27 +610,24 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       color: Color(0xFF1C1C1C),
                     ),
                   ),
-                   SizedBox(height: 8),
+                  SizedBox(height: 8),
                   TextField(
                     controller: _confirmPassController,
                     obscureText: _hideConfirm,
-                    style:  TextStyle(
-                      fontSize: 16,
-                      color: Color(0xFF1C1C1C),
-                    ),
+                    style: TextStyle(fontSize: 16, color: Color(0xFF1C1C1C)),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor:  Color(0xFFF1F2EC),
+                      fillColor: Color(0xFFF1F2EC),
                       hintText: 'Reescribe tu nueva contraseña',
-                      hintStyle:  TextStyle(
+                      hintStyle: TextStyle(
                         fontSize: 16,
                         color: Color(0xFF555B55),
                       ),
-                      contentPadding:  EdgeInsets.symmetric(
+                      contentPadding: EdgeInsets.symmetric(
                         horizontal: 12,
                         vertical: 16,
                       ),
-                      prefixIcon:  Icon(
+                      prefixIcon: Icon(
                         Icons.password,
                         color: Color(0xFF555B55),
                       ),
@@ -681,7 +647,7 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       ),
                     ),
                   ),
-                   SizedBox(height: 12),
+                  SizedBox(height: 12),
 
                   // Botón actualizar contraseña
                   GestureDetector(
@@ -689,10 +655,10 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                     child: Container(
                       height: 52,
                       decoration: BoxDecoration(
-                        color:  Color(0xFFE4E7E1),
+                        color: Color(0xFFE4E7E1),
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child:  Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
@@ -716,10 +682,10 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                 ],
               ),
             ),
-             SizedBox(height: 24),
+            SizedBox(height: 24),
 
             // ---------- Apariencia (encabezado) ----------
-             Row(
+            Row(
               children: [
                 Icon(Icons.circle, size: 10, color: Color(0xFF005A2B)),
                 SizedBox(width: 8),
@@ -742,15 +708,15 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                 ),
               ],
             ),
-             SizedBox(height: 12),
+            SizedBox(height: 12),
 
             // ---------- Apariencia (tarjeta) ----------
             Container(
-              padding:  EdgeInsets.all(16),
+              padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
-                boxShadow:  [
+                boxShadow: [
                   BoxShadow(
                     color: Color(0x14000000),
                     blurRadius: 8,
@@ -761,7 +727,7 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   Text(
+                  Text(
                     'Tema de la Aplicación',
                     style: TextStyle(
                       fontSize: 13,
@@ -769,8 +735,8 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       color: Color(0xFF1C1C1C),
                     ),
                   ),
-                   SizedBox(height: 6),
-                   Text(
+                  SizedBox(height: 6),
+                  Text(
                     'Selecciona el modo visual para tus consultas de aula y notas.',
                     style: TextStyle(
                       fontSize: 14,
@@ -778,7 +744,7 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       color: Color(0xFF555B55),
                     ),
                   ),
-                   SizedBox(height: 16),
+                  SizedBox(height: 16),
                   Row(
                     children: [
                       // Modo claro
@@ -786,13 +752,13 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                         child: GestureDetector(
                           onTap: () => setState(() => _isDark = false),
                           child: Container(
-                            padding:  EdgeInsets.all(12),
+                            padding: EdgeInsets.all(12),
                             decoration: BoxDecoration(
-                              color:  Color(0xFFF1F2EC),
+                              color: Color(0xFFF1F2EC),
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
                                 color: !_isDark
-                                    ?  Color(0xFF005A2B)
+                                    ? Color(0xFF005A2B)
                                     : Colors.transparent,
                                 width: 2,
                               ),
@@ -811,30 +777,30 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(6),
                                       ),
-                                      child:  Icon(
+                                      child: Icon(
                                         Icons.light_mode,
                                         size: 20,
                                         color: Color(0xFFE0A100),
                                       ),
                                     ),
                                     if (!_isDark)
-                                       Icon(
+                                      Icon(
                                         Icons.check_circle,
                                         size: 22,
                                         color: Color(0xFF005A2B),
                                       ),
                                   ],
                                 ),
-                                 SizedBox(height: 22),
-                                 Text(
+                                SizedBox(height: 22),
+                                Text(
                                   'Modo Claro',
                                   style: TextStyle(
                                     fontSize: 16,
                                     color: Color(0xFF1C1C1C),
                                   ),
                                 ),
-                                 SizedBox(height: 2),
-                                 Text(
+                                SizedBox(height: 2),
+                                Text(
                                   'Predeterminado',
                                   style: TextStyle(
                                     fontSize: 12,
@@ -846,19 +812,19 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                           ),
                         ),
                       ),
-                       SizedBox(width: 12),
+                      SizedBox(width: 12),
                       // Modo oscuro
                       Expanded(
                         child: GestureDetector(
                           onTap: () => setState(() => _isDark = true),
                           child: Container(
-                            padding:  EdgeInsets.all(12),
+                            padding: EdgeInsets.all(12),
                             decoration: BoxDecoration(
-                              color:  Color(0xFFF1F2EC),
+                              color: Color(0xFFF1F2EC),
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
                                 color: _isDark
-                                    ?  Color(0xFF005A2B)
+                                    ? Color(0xFF005A2B)
                                     : Colors.transparent,
                                 width: 2,
                               ),
@@ -874,10 +840,10 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                                       width: 34,
                                       height: 34,
                                       decoration: BoxDecoration(
-                                        color:  Color(0xFF2B2B2B),
+                                        color: Color(0xFF2B2B2B),
                                         borderRadius: BorderRadius.circular(6),
                                       ),
-                                      child:  Icon(
+                                      child: Icon(
                                         Icons.dark_mode,
                                         size: 20,
                                         color: Colors.white,
@@ -889,21 +855,21 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                                           : Icons.radio_button_unchecked,
                                       size: 22,
                                       color: _isDark
-                                          ?  Color(0xFF005A2B)
-                                          :  Color(0xFF6B716B),
+                                          ? Color(0xFF005A2B)
+                                          : Color(0xFF6B716B),
                                     ),
                                   ],
                                 ),
-                                 SizedBox(height: 22),
-                                 Text(
+                                SizedBox(height: 22),
+                                Text(
                                   'Modo Oscuro',
                                   style: TextStyle(
                                     fontSize: 16,
                                     color: Color(0xFF1C1C1C),
                                   ),
                                 ),
-                                 SizedBox(height: 2),
-                                 Text(
+                                SizedBox(height: 2),
+                                Text(
                                   'Alto descanso visual',
                                   style: TextStyle(
                                     fontSize: 12,
@@ -920,15 +886,15 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                 ],
               ),
             ),
-             SizedBox(height: 20),
+            SizedBox(height: 20),
 
             // ---------- Marcación de asistencia ----------
             Container(
-              padding:  EdgeInsets.all(16),
+              padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
-                boxShadow:  [
+                boxShadow: [
                   BoxShadow(
                     color: Color(0x14000000),
                     blurRadius: 8,
@@ -942,17 +908,17 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                     width: 36,
                     height: 36,
                     decoration: BoxDecoration(
-                      color:  Color(0xFFE4E7E1),
+                      color: Color(0xFFE4E7E1),
                       borderRadius: BorderRadius.circular(6),
                     ),
-                    child:  Icon(
+                    child: Icon(
                       Icons.how_to_reg_outlined,
                       size: 20,
                       color: Color(0xFF3D7A52),
                     ),
                   ),
-                   SizedBox(width: 12),
-                   Expanded(
+                  SizedBox(width: 12),
+                  Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -975,19 +941,19 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                       ],
                     ),
                   ),
-                   SizedBox(width: 8),
+                  SizedBox(width: 8),
                   Switch(
                     value: _reminders,
                     onChanged: (value) => setState(() => _reminders = value),
                     activeColor: Colors.white,
-                    activeTrackColor:  Color(0xFF005A2B),
+                    activeTrackColor: Color(0xFF005A2B),
                     inactiveThumbColor: Colors.white,
-                    inactiveTrackColor:  Color(0xFFC9CEC6),
+                    inactiveTrackColor: Color(0xFFC9CEC6),
                   ),
                 ],
               ),
             ),
-             SizedBox(height: 28),
+            SizedBox(height: 28),
 
             // ---------- Guardar / descartar ----------
             GestureDetector(
@@ -995,9 +961,9 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
               child: Container(
                 height: 54,
                 decoration: BoxDecoration(
-                  color:  Color(0xFF00843D),
+                  color: Color(0xFF00843D),
                   borderRadius: BorderRadius.circular(8),
-                  boxShadow:  [
+                  boxShadow: [
                     BoxShadow(
                       color: Color(0x33000000),
                       blurRadius: 8,
@@ -1005,7 +971,7 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                     ),
                   ],
                 ),
-                child:  Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.save_outlined, size: 22, color: Colors.white),
@@ -1022,11 +988,11 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
                 ),
               ),
             ),
-             SizedBox(height: 8),
+            SizedBox(height: 8),
             Center(
               child: TextButton(
                 onPressed: () => Navigator.of(context).maybePop(),
-                child:  Text(
+                child: Text(
                   'Descartar cambios',
                   style: TextStyle(
                     fontSize: 14,

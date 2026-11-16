@@ -33,7 +33,7 @@ class EstudianteHomeScreen extends StatelessWidget {
 
                   // ---------- Mis Asignaturas ----------
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {Navigator.pushNamed(context, "asignaturasEstudiante");},
                     child: Container(
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
@@ -125,7 +125,7 @@ class EstudianteHomeScreen extends StatelessWidget {
 
                   // ---------- Historial de Clases ----------
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {Navigator.pushNamed(context, "historialEstudiante");},
                     child: Container(
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
