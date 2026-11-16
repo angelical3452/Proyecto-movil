@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "302704908530",
+    "project_id": "fir-movil-acf42",
+    "storage_bucket": "fir-movil-acf42.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302704908530:android:5d39f7e3956f1af8d4986b",
+        "android_client_info": {
+          "package_name": "com.example.asistencias_proyecto_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNq4fDcG6-C9OLNXWmqVwURpGJsO0NHS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
