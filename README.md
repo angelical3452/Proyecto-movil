@@ -1,6 +1,6 @@
 # Proyecto-movil
 Integrantes
-Miguel Angel Ortiz Sterling
+Miguel Angel Ortiz Sterling y
 Sebastian Moncada Conde
 Descripción
 
