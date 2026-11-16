@@ -2,6 +2,7 @@
 Integrantes
 Miguel Angel Ortiz Sterling y
 Sebastian Moncada Conde
+
 Descripción
 
 Maquetación del frontend móvil de una aplicación de control de asistencias, desarrollada con Flutter y Firebase.
