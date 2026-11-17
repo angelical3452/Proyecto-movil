@@ -33,7 +33,9 @@ class EstudianteHomeScreen extends StatelessWidget {
 
                   // ---------- Mis Asignaturas ----------
                   GestureDetector(
-                    onTap: () {Navigator.pushNamed(context, "asignaturasEstudiante");},
+                    onTap: () {
+                      Navigator.pushNamed(context, "asignaturasEstudiante");
+                    },
                     child: Container(
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
@@ -125,7 +127,9 @@ class EstudianteHomeScreen extends StatelessWidget {
 
                   // ---------- Historial de Clases ----------
                   GestureDetector(
-                    onTap: () {Navigator.pushNamed(context, "historialEstudiante");},
+                    onTap: () {
+                      Navigator.pushNamed(context, "historialEstudiante");
+                    },
                     child: Container(
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
@@ -216,8 +220,100 @@ class EstudianteHomeScreen extends StatelessWidget {
 
                   // Empuja la tarjeta de próxima clase hacia abajo
                   Spacer(),
-                  SizedBox(height: 32),
-
+                  SizedBox(height: 20),
+                  // ---------- Justificacion ----------
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, "justificacionEstudiante");
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0x26000000),
+                            blurRadius: 8,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFE3EDE6),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Icon(
+                              Icons.fact_check_outlined,
+                              size: 34,
+                              color: Color(0xFF005A2B),
+                            ),
+                          ),
+                          SizedBox(width: 20),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Justificar Inasistencias',
+                                  style: TextStyle(
+                                    fontFamily: 'serif',
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xFF1C1C1C),
+                                  ),
+                                ),
+                                SizedBox(height: 8),
+                                Text(
+                                  'Radica incapacidades médicas o solicitudes de justificación para clases no asistidas.',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    height: 1.4,
+                                    color: Color(0xFF3F463F),
+                                  ),
+                                ),
+                                SizedBox(height: 14),
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 4,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFE9EBE5),
+                                    borderRadius: BorderRadius.circular(3),
+                                  ),
+                                  child: Text(
+                                    'Radicar solicitud',
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      letterSpacing: 0.3,
+                                      color: Color(0xFF3F463F),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Padding(
+                            padding: EdgeInsets.only(top: 4),
+                            child: Icon(
+                              Icons.arrow_forward,
+                              size: 26,
+                              color: Color(0xFF005A2B),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 32.0),
                   // ---------- Próxima clase hoy ----------
                   Container(
                     padding: EdgeInsets.all(20),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../screens/asignaturas.dart';
 import '../screens/crear_asignatura.dart';
 import '../screens/historial_estudiante.dart';
 import '../screens/home.dart';
+import '../screens/justificaciones.dart';
 import '../screens/login.dart';
 import '../screens/recuperar_contrasenia.dart';
 import '../screens/registro.dart';
@@ -15,6 +17,7 @@ import '../screens/inasistencia_justificaciones.dart';
 import '../screens/detalle_estudiante.dart';
 import '../screens/historial_asignaturas.dart';
 import '../screens/asignaturas_inscritas.dart';
+
 
 Map<String, WidgetBuilder> getAplicationRouter() {
   return <String, WidgetBuilder>{
@@ -39,5 +42,7 @@ Map<String, WidgetBuilder> getAplicationRouter() {
     "docenteHistorial" : (BuildContext context) => DocenteHistorialScreen(),
     "asignaturasEstudiante" : (BuildContext context ) => EstudianteMisAsignaturasScreen(),
     "historialEstudiante" :(BuildContext context) => EstudianteHistorialScreen(),
+    "justificacionEstudiante" :(BuildContext context) => EstudianteJustificarScreen(),
+    "docenteAsignatura" : (BuildContext context) => DocenteAsignaturaScreen(), 
   };
 }

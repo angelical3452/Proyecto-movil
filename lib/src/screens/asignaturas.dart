@@ -360,8 +360,7 @@ class DocenteAsignaturaScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      onPressed: () =>
-                          Navigator.pushNamed(context, "docenteDetalle"),
+                      onPressed: (){},
                       icon: Icon(Icons.play_circle_outline, size: 20),
                       label: Text(
                         'Iniciar Clase y Asistencia QR',

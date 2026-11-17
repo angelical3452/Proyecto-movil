@@ -616,7 +616,12 @@ class _VerAsignaturasProfScreenState extends State<VerAsignaturasProfScreen> {
                             children: [
                               Expanded(
                                 child: GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.pushNamed(
+                                      context,
+                                      "docenteAsignatura",
+                                    );
+                                  },
                                   child: Container(
                                     height: 50,
                                     decoration: BoxDecoration(
@@ -648,7 +653,12 @@ class _VerAsignaturasProfScreenState extends State<VerAsignaturasProfScreen> {
                               ),
                               SizedBox(width: 8),
                               GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                    context,
+                                    "docenteAsignatura",
+                                  );
+                                },
                                 child: Container(
                                   width: 50,
                                   height: 50,
@@ -676,7 +686,9 @@ class _VerAsignaturasProfScreenState extends State<VerAsignaturasProfScreen> {
             // ---------- Crear nueva asignatura ----------
             SizedBox(height: 6),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, "crear_asignatura");
+              },
               child: Container(
                 height: 54,
                 decoration: BoxDecoration(

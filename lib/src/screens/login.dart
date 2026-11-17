@@ -325,7 +325,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       SizedBox(height: 20.0),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          AuthService().iniciarConMicrosoft();
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFFF3F4F0),
                           foregroundColor: Color(0xFF007A33),
